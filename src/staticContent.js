@@ -11,7 +11,7 @@ const drawHeader = (containingElement) => {
     h1.classList.add("restaurantName");
     h1.innerText = restaurantName;
 
-    let tagline = "Serving fresh, local ingrediants in a relaxed neighborhood setting.";
+    let tagline = "Serving fresh, local ingredients in a relaxed neighborhood setting.";
     let h2 = document.createElement("h2");
     h2.classList.add("tagline");
     h2.innerText = tagline;

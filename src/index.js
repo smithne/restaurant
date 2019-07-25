@@ -1,1 +1,5 @@
-console.log('webpack operational');
+import drawHeader from './staticContent';
+
+drawHeader('content');
+
+

@@ -32,6 +32,14 @@ containerDiv.appendChild(tabContentDiv);
 
 // add logic to switch 
 const selectSection = (section) => {
-    tabContentDiv.innerHTML = `This is the ${section} content.`;
+    tabContentDiv.innerHTML = `This is the ${section} content. It will include the ${camelize(section)} module.`;
 }
 
+
+// camelize function to convert tab names to js class names
+function camelize(str) {
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+      return index == 0 ? word.toLowerCase() : word.toUpperCase();
+    }).replace(/\s+/g, '');
+  }
+  

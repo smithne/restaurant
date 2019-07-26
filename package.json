@@ -4,7 +4,9 @@
   "description": "https://www.theodinproject.com/courses/javascript/lessons/restaurant-page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --mode=production",
+    "watch": "webpack --progress --watch"
   },
   "author": "Nick Smith <smith.nicholas.ellis@gmail.com>",
   "repository": "https://github.com/smithne/restaurant",

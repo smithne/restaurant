@@ -1,4 +1,6 @@
 import drawHeader from './staticContent';
+import renderMenu from './menu';
+import renderContact from './contact';
 
 const conatinerID = 'content';
 const containerDiv = document.getElementById(conatinerID);
@@ -32,14 +34,9 @@ containerDiv.appendChild(tabContentDiv);
 
 // add logic to switch 
 const selectSection = (section) => {
-    tabContentDiv.innerHTML = `This is the ${section} content. It will include the ${camelize(section)} module.`;
+    if (section == "Menu") {
+        tabContentDiv.innerHTML = renderMenu();
+    } else if (section == "Contact") {
+        tabContentDiv.innerHTML = renderContact();    
+    }
 }
-
-
-// camelize function to convert tab names to js class names
-function camelize(str) {
-    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
-      return index == 0 ? word.toLowerCase() : word.toUpperCase();
-    }).replace(/\s+/g, '');
-  }
-  
